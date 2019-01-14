@@ -1,0 +1,7 @@
+{
+	"common_dir" : "D:/SRC_FPGA/TRX_ADCOVR_I2C_LED/",
+	"acds_version" : "Version 15.0.0",
+	"platform" : "windows",
+	"os" : "Windows 7",
+	"qpf" : "Hermes_Lite.qpf"
+}
