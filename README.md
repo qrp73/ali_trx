@@ -10,6 +10,18 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 ![Module Diagram](https://i.imgur.com/4QCVkiy.png)
 
 
+## AD6645 module mods
+
+The module can be used just out of the box, the one thing you're need to make sure is that the resistor RT1 is installed on the board. Sometimes it is missing. The resistor value should be about 51-60 Ohm. 
+
+The power supply for the module should be low noise 5V. You can use bipolar power supply, but unipolar is more easy. Just connect -5V and GND together and provide +5V to the power supply connector.
+
+In order to improve Noise Figure and distortions, you can replace operational amplifier with RF transformer. The board is already prepared to install RF transformer. AD6645 is very famous ADC and we can find possible solutions in the book Kenton Williston "Digital Signal Processing World Class Designs":
+
+![Improve ADC noise figure](https://i.imgur.com/UiNLvjO.png)
+
+
+
 ## DIY Modules
 
 AD6645: https://www.aliexpress.com/item/1PC-14-105M-high-speed-ADC-module-data-acquisition-module/32730197994.html
