@@ -30,8 +30,8 @@ Currently I'm using the following 7-th Chebyshev Low Pass Filter with 31 MHz cut
 
 ![LPF circuit](https://i.imgur.com/ZNwHBFF.png) ![LPF response](https://i.imgur.com/eexpmrS.jpg)
 
-Don't take attention to the "BPF YU1LM" text, I just used PCB for VHF BPF.
-I build it with EC24-R39K and EC24-R47K inductors.
+Don't take attention to the "BPF YU1LM" text, I just used PCB for VHF BPF. I build this LPF with EC24-R39K and EC24-R47K inductors.
+
 This LPF works, but it appears that it has too high loss on 15+ MHz, so I'm planning to redesign it later.
 
 
