@@ -6,7 +6,7 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 [![License](https://img.shields.io/badge/license-GNU%20GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl.html)
 
 
-## Module Diagram
+## Circuit Diagram
 ![Module Diagram](https://i.imgur.com/4QCVkiy.png)
 
 
