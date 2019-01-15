@@ -12,7 +12,7 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 
 ## AD6645 module mods and power supply
 
-The module can be used just out of the box, the one thing you're need to make sure is that the resistor RT1 is installed on the board. Sometimes it is missing. The resistor value should be about 51-60 Ohm. The other way is to use 50 Ohm pass-through dummy load on the input connector.
+The module can be used just out of the box, the one thing you're need to make sure is that the resistor RT1 is installed on the board. Sometimes it is missing. The resistor value should be 60 Ohm. The other way is to use 50 Ohm pass-through dummy load on the input connector. With 50 Ohm pass-through dummy load you will get for about 47 Ohm input impedance. 
 
 According to the AD6645 datasheet, it is preffered to install back-to-back Schottky diodes across the secondry coil of the CLK transformer. It will limit excessive amplitude swings from the clock into the AD6645 to approximately 0.8 Vpp differential. This helps to prevent the large voltage swings of the clock from feeding through to other portions of the AD6645 and limits the noise presented to the encode inputs.
 
