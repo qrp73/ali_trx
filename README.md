@@ -38,6 +38,10 @@ WM8731: https://www.aliexpress.com/item/FREE-SHIPPING-Wm8731-module-audio-module
 
 ![WM8731](https://i.imgur.com/W0RaJWr.jpg)
 
+ATT 6 dB: https://www.aliexpress.com/item/2W-SMA-DC-6GHz-Coaxial-Fixed-Attenuators-Frequency-6GHz-SMA-Fixed-Connectors/32896198417.html
+
+![ATT 6 dB](https://i.imgur.com/c58DhRB.jpg)
+
 
 
 
