@@ -16,7 +16,7 @@ The module can be used just out of the box, the one thing you're need to make su
 
 The power supply for the module should be low noise 5V. You can use bipolar power supply, but unipolar is more easy. Just connect -5V and GND together and provide +5V to the power supply connector.
 
-In order to improve Noise Figure and distortions, you can replace operational amplifier with RF transformer. The board is already prepared to install RF transformer. AD6645 is very famous ADC and we can find possible solutions in the book Kenton Williston "Digital Signal Processing World Class Designs":
+In order to improve Noise Figure and reduce distortions, you can replace operational amplifier with RF transformer. The board is already prepared to install RF transformer. AD6645 is very famous ADC and we can find possible solutions in the book Kenton Williston "Digital Signal Processing World Class Designs":
 
 ![Improve ADC noise figure](https://i.imgur.com/UiNLvjO.png)
 
