@@ -18,6 +18,8 @@ The power supply for the module should be low noise 5V. You can use bipolar powe
 
 ![Install heatsink](https://i.imgur.com/qluExOd.jpg)
 
+## Optional AD6645 module mod to improve Noise Figure and reduce distortions
+
 In order to improve Noise Figure and reduce distortions, you can replace operational amplifier on the AD6645 module with RF transformer. The board is already prepared for such mod. AD6645 is very famous ADC and we can find possible solutions in the book Kenton Williston "Digital Signal Processing World Class Designs":
 
 ![Improve ADC noise figure](https://i.imgur.com/UiNLvjO.png)
