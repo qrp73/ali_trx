@@ -16,19 +16,19 @@ The module can be used just out of the box, the one thing you're need to make su
 
 According to the AD6645 datasheet, it is preffered to install back-to-back Schottky diodes across the secondry coil of the CLK transformer. It will limit excessive amplitude swings from the clock into the AD6645 to approximately 0.8 Vpp differential. This helps to prevent the large voltage swings of the clock from feeding through to other portions of the AD6645 and limits the noise presented to the encode inputs.
 
-![AD6645 CLK Schottky diodes](https://i.imgur.com/VZSisCf.png)
+![AD6645 CLK Schottky diodes](pictures/AD6645-clock-schottky-diodes.png?raw=true)
 
 Unfortunately these diodes are missing from aliexpress module. But I recommend to install it.
 
 The power supply for the module should be low noise 5V. You can use bipolar power supply, but unipolar is more easy. Just connect -5V and GND together and provide +5V to the power supply connector. The AD6645 module together with TCXO consumes for about 300-330 mA on 5V line. The AD6645 chip is very-very hot, so I recommend to install the heatsink on it.
 
-![Install heatsink](https://i.imgur.com/qluExOd.jpg)
+![Install heatsink](pictures/ad6645-heatsink.jpg?raw=true)
 
 ## [Optional] AD6645 module mod to improve Noise Figure and reduce distortions
 
 In order to improve Noise Figure and reduce distortions, you can replace operational amplifier on the AD6645 module with RF transformer. The board is already prepared for such mod. AD6645 is very famous ADC and we can find possible solutions in the book Kenton Williston "Digital Signal Processing World Class Designs":
 
-![Improve ADC noise figure](https://i.imgur.com/UiNLvjO.png)
+![Improve ADC noise figure](pictures/AD6645-input-transformer.png?raw=true)
 
 Since evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer on the input, it looks like the better solution indeed.
 
@@ -36,7 +36,7 @@ Since evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer 
 
 Currently I'm using the following 7-th Chebyshev Low Pass Filter with 31 MHz cut-off :
 
-![LPF circuit](https://i.imgur.com/ZNwHBFF.png) ![LPF response](https://i.imgur.com/eexpmrS.jpg)
+![LPF circuit](pictures/LPF-390-470-schema.png?raw=true) ![LPF response](pictures/LPF-390-470-photo.jpg?raw=true)
 
 Don't take attention to the "BPF YU1LM" text (I just reused PCB which is designed for VHF BPF). 
 
