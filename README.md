@@ -12,9 +12,11 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 
 ## AD6645 module mods
 
-The module can be used just out of the box, the one thing you're need to make sure is that the resistor RT1 is installed on the board. Sometimes it is missing. The resistor value should be about 51-60 Ohm. 
+The module can be used just out of the box, the one thing you're need to make sure is that the resistor RT1 is installed on the board. Sometimes it is missing. The resistor value should be about 51-60 Ohm. The other way is to use 50 Ohm pass-through dummy load on the input connector.
 
 The power supply for the module should be low noise 5V. You can use bipolar power supply, but unipolar is more easy. Just connect -5V and GND together and provide +5V to the power supply connector. The AD6645 module together with TCXO consumes for about 300-330 mA on 5V line. The AD6645 chip is very-very hot, so I recommend to install the heatsink on it.
+
+![Install heatsink](https://i.imgur.com/qluExOd.jpg)
 
 In order to improve Noise Figure and reduce distortions, you can replace operational amplifier on the AD6645 module with RF transformer. The board is already prepared for such mod. AD6645 is very famous ADC and we can find possible solutions in the book Kenton Williston "Digital Signal Processing World Class Designs":
 
