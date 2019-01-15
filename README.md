@@ -34,7 +34,8 @@ Since evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer 
 
 ## LPF
 
-Currently I'm using the following 7-th Chebyshev Low Pass Filter with 31 MHz cut-off :
+The Low Pass Filter is required in order to reduce signals above 48 MHz.
+At the moment I'm using 7-th Chebyshev LPF with 31 MHz cut-off:
 
 ![LPF circuit](pictures/LPF-390-470-schema.png?raw=true) ![LPF response](pictures/LPF-390-470-photo.jpg?raw=true)
 
