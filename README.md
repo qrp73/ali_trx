@@ -7,9 +7,13 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 
 ## DIY Modules
 
-ADC6645: https://www.aliexpress.com/item/1PC-14-105M-high-speed-ADC-module-data-acquisition-module/32730197994.html
+AD6645: https://www.aliexpress.com/item/1PC-14-105M-high-speed-ADC-module-data-acquisition-module/32730197994.html
 
 ![AD6645 module](https://i.imgur.com/VDfjFQM.jpg)
+
+HEATSINK FOR AD6645: https://www.aliexpress.com/item/10Pcs-Aluminum-Alloy-Stepper-Motor-Drive-Special-Cooling-Heat-Sink-For-TMC2100-3D-Printer-Parts/32840397703.html
+
+![HEATSINK FOR AD6645](https://i.imgur.com/pFud16l.jpg)
 
 FPGA: https://www.aliexpress.com/item/fpga-development-board-EP4CE22E22C8N-board-altera-fpga-board-altera-board-USB-Blaster/32834582202.html
 
@@ -20,6 +24,12 @@ Remark: currently this FPGA module is not available, but it can be replaced with
 LAN8720: https://www.aliexpress.com/item/LAN8720-Module-Physical-Layer-Transceiver-PHY-Module-Embedded-Web-Server-RMII-Interface-MDIX-Regulator-I-O/32845851676.html
 
 ![LAN8720](https://i.imgur.com/WoWGo0s.jpg)
+
+TCXO 96 MHz: https://www.aliexpress.com/item/116MHz-96MHz-104MHz-114MHZ-160MHz-high-precision-temperature-compensation-crystal-oscillator-TCXO-0-1ppm-high-stable/32794136550.html
+
+![TCXO](https://i.imgur.com/1rjW7vK.jpg)
+
+
 
 
 
