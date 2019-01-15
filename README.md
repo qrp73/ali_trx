@@ -30,7 +30,7 @@ In order to improve Noise Figure and reduce distortions, you can replace operati
 
 ![Improve ADC noise figure](https://i.imgur.com/UiNLvjO.png)
 
-Evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer on the input, so it looks like the better way.
+Evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer on the input, so it looks like the better solution.
 
 ## LPF
 
