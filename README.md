@@ -30,6 +30,8 @@ In order to improve Noise Figure and reduce distortions, you can replace operati
 
 ![Improve ADC noise figure](https://i.imgur.com/UiNLvjO.png)
 
+Evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer on the input, so it looks like the better way.
+
 ## LPF
 
 Currently I'm using the following 7-th Chebyshev Low Pass Filter with 31 MHz cut-off :
@@ -72,6 +74,10 @@ WM8731: https://www.aliexpress.com/item/FREE-SHIPPING-Wm8731-module-audio-module
 ATT 6 dB: https://www.aliexpress.com/item/2W-SMA-DC-6GHz-Coaxial-Fixed-Attenuators-Frequency-6GHz-SMA-Fixed-Connectors/32896198417.html
 
 ![ATT 6 dB](https://i.imgur.com/c58DhRB.jpg)
+
+ADT4-1WT: https://www.aliexpress.com/item/Free-Shipping-PIC16F1829-I-SS-PIC16F1829-SSOP20-new-and-Original-in-stock/32295905036.html
+
+![ADT4-1WT](https://i.imgur.com/E99LSdG.jpg)
 
 
 
