@@ -10,7 +10,7 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 ![Module Diagram](https://i.imgur.com/4QCVkiy.png)
 
 
-## AD6645 module mods
+## AD6645 module mods and power supply
 
 The module can be used just out of the box, the one thing you're need to make sure is that the resistor RT1 is installed on the board. Sometimes it is missing. The resistor value should be about 51-60 Ohm. The other way is to use 50 Ohm pass-through dummy load on the input connector.
 
