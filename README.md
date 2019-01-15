@@ -5,6 +5,11 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 ![Language](https://img.shields.io/badge/language-verilog-yellow.svg)
 [![License](https://img.shields.io/badge/license-GNU%20GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl.html)
 
+
+## Module Diagram
+![Module Diagram](https://i.imgur.com/4QCVkiy.png)
+
+
 ## DIY Modules
 
 AD6645: https://www.aliexpress.com/item/1PC-14-105M-high-speed-ADC-module-data-acquisition-module/32730197994.html
@@ -28,6 +33,12 @@ LAN8720: https://www.aliexpress.com/item/LAN8720-Module-Physical-Layer-Transceiv
 TCXO 96 MHz: https://www.aliexpress.com/item/116MHz-96MHz-104MHz-114MHZ-160MHz-high-precision-temperature-compensation-crystal-oscillator-TCXO-0-1ppm-high-stable/32794136550.html
 
 ![TCXO](https://i.imgur.com/1rjW7vK.jpg)
+
+WM8731: https://www.aliexpress.com/item/FREE-SHIPPING-Wm8731-module-audio-module-mcu-fpga-music/1674210328.html
+
+![WM8731](https://i.imgur.com/W0RaJWr.jpg)
+
+
 
 
 
