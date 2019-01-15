@@ -8,7 +8,6 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 
 ## Circuit Diagram
 ![Circuit Diagram](pictures/module-diagram.png?raw=true)
-![Circuit Diagram](https://i.imgur.com/4QCVkiy.png)
 
 
 ## AD6645 module mods and power supply
