@@ -345,6 +345,20 @@ endgenerate
 
 reg [13:0]temp_ADC;
 
+wire rxclipp = (temp_ADC == 14'b01111111111111);
+wire rxclipn = (temp_ADC == 14'b10000000000000);
+
+// Near clips occur just over 1 dB from full range
+// 2**12 = 4096
+// (6.02*12)+1.76 = 74
+// 2**11.8074 = 3584
+// 4096-3584 = 512 (256 from positive and 256 from negtive clips)
+// (6.02*11.8074)+1.76 = 72.84
+// 74 - 72.84 = ~1.16 dB from full range
+wire rxnearclip = (temp_ADC[13:10] == 4'b0111) | (temp_ADC[13:10] == 4'b1000);
+
+
+
 assign exp_ptt_n = FPGA_PTT;
 assign userout = IF_OC;
 
@@ -936,7 +950,21 @@ assign IO4 = 1'b1;
 assign IO5 = 1'b1;
 assign IO6 = 1'b1;
 assign IO8 = 1'b1;
-assign OVERFLOW = ADC_ovr;
+
+reg OVERFLOW_acc;
+reg IF_CLRCLK_prev;
+always @ (posedge ADC_CLK)
+begin
+    IF_CLRCLK_prev <= IF_CLRCLK;
+    if (IF_CLRCLK & !IF_CLRCLK_prev) 
+        begin
+            OVERFLOW <= OVERFLOW_acc;
+            OVERFLOW_acc <= ADC_ovr;
+        end 
+    else
+        OVERFLOW_acc <= OVERFLOW_acc | ADC_ovr;
+end
+
 
 
 Hermes_Tx_fifo_ctrl #(RX_FIFO_SZ, TX_FIFO_SZ) TXFC 
@@ -1596,10 +1624,10 @@ debounce de_ptt(.clean_pb(clean_ptt), .pb(~ptt_i), .clk(ADC_CLK));
 //Led_flash Flash_LED4(.clock(ADC_CLK), .signal(this_MAC), .LED(leds[4]), .period(half_second));
 //Led_flash Flash_LED5(.clock(ADC_CLK), .signal(run), .LED(leds[5]), .period(half_second));
 //Led_flash Flash_LED6(.clock(ADC_CLK), .signal(IF_SYNC_state == SYNC_RX_1_2), .LED(leds[6]), .period(half_second));   
-Led_flash Flash_LED0(.clock(ADC_CLK), .signal(ADC_ovr), .LED(leds[0]), .period(half_second));
-Led_flash Flash_LED1(.clock(ADC_CLK), .signal(1'b0), .LED(leds[1]), .period(half_second));
-Led_flash Flash_LED2(.clock(ADC_CLK), .signal(1'b0), .LED(leds[2]), .period(half_second));
-Led_flash Flash_LED3(.clock(ADC_CLK), .signal(1'b0), .LED(leds[3]), .period(half_second));
+Led_flash Flash_LED0(.clock(ADC_CLK), .signal(rxnearclip), .LED(leds[0]), .period(half_second));
+Led_flash Flash_LED1(.clock(ADC_CLK), .signal(rxclipp), .LED(leds[1]), .period(half_second));
+Led_flash Flash_LED2(.clock(ADC_CLK), .signal(rxclipn), .LED(leds[2]), .period(half_second));
+Led_flash Flash_LED3(.clock(ADC_CLK), .signal(OVERFLOW), .LED(leds[3]), .period(half_second));
 
 
 

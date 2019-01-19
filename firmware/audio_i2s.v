@@ -1,5 +1,4 @@
-// audio_I2S.v
-
+// [SOURCE] https://github.com/johnlaur/Angelia/blob/master/audio_I2S.v
 //
 //  HPSDR - High Performance Software Defined Radio
 //
