@@ -30,11 +30,14 @@ In order to improve Noise Figure and reduce distortions, you can replace operati
 
 ![Improve ADC noise figure](pictures/AD6645-input-transformer.png?raw=true)
 
-Since evaluation board for AD6645 from Analog Devices uses ADT4-1WT transformer on the input, it looks like the better solution indeed.
+The ADT4-1WT has a 4:1 impedance ratio (2:1 turns/voltage ratio). This is particularly useful for interfacing to 50 [Ohm] equipment. 
+The 249 [Ohm] resistor in parallel with the AD6645 internal resistance results in a net input impedance of 200 [Ohm]. The noise figure is improved to 28.8 dB because of the "noise-free" voltage gain of the transformer. 
+We can use 1:4 turn transformer, but actually higher turns ratios are not generally practical because of bandwidth and distortion limitations.
+The evaluation board for AD6645 from Analog Devices also uses ADT4-1WT transformer on the input, so it looks like the best solution indeed. 
 
 ## LPF
 
-The Low Pass Filter is required in order to reduce signals above 48 MHz.
+The Low Pass Filter is required in order to reduce level of frequencies above 48 MHz. These frequencies will mirror from 48 MHz border (half of the ADC clock) and merge into 0...48 MHz range, so we need to filter them.
 At the moment I'm using 7-th Chebyshev LPF with 31 MHz cut-off:
 
 ![LPF circuit](pictures/LPF-390-470-schema.png?raw=true) ![LPF response](pictures/LPF-390-470-photo.jpg?raw=true)
@@ -46,7 +49,7 @@ I build this LPF with EC24-R39K and EC24-R47K inductors and it works, but it app
 
 ## DIY Modules
 
-AD6645: https://www.aliexpress.com/item/1PC-14-105M-high-speed-ADC-module-data-acquisition-module/32730197994.html
+AD6645 (high speed ADC module): https://www.aliexpress.com/item/1PC-14-105M-high-speed-ADC-module-data-acquisition-module/32730197994.html
 
 ![AD6645 module](https://i.imgur.com/VDfjFQM.jpg)
 
@@ -60,7 +63,7 @@ FPGA: https://www.aliexpress.com/item/fpga-development-board-EP4CE22E22C8N-board
 
 Remark: currently this FPGA module is not available, but it can be replaced with more powerful https://www.aliexpress.com/store/product/cyclone-iv-board-E22-core-board-altera-fpga-board-altera-board-fpga-development-board-EP4CE22f17C8N/620372_32853228751.html
 
-LAN8720: https://www.aliexpress.com/item/LAN8720-Module-Physical-Layer-Transceiver-PHY-Module-Embedded-Web-Server-RMII-Interface-MDIX-Regulator-I-O/32845851676.html
+LAN8720 (10/100 Ethernet PHY module): https://www.aliexpress.com/item/LAN8720-Module-Physical-Layer-Transceiver-PHY-Module-Embedded-Web-Server-RMII-Interface-MDIX-Regulator-I-O/32845851676.html
 
 ![LAN8720](https://i.imgur.com/WoWGo0s.jpg)
 
@@ -68,12 +71,11 @@ TCXO 96 MHz: https://www.aliexpress.com/item/116MHz-96MHz-104MHz-114MHZ-160MHz-h
 
 ![TCXO](https://i.imgur.com/1rjW7vK.jpg)
 
-WM8731: https://www.aliexpress.com/item/FREE-SHIPPING-Wm8731-module-audio-module-mcu-fpga-music/1674210328.html
+WM8731 (audio module): https://www.aliexpress.com/item/FREE-SHIPPING-Wm8731-module-audio-module-mcu-fpga-music/1674210328.html
 
 ![WM8731](https://i.imgur.com/W0RaJWr.jpg)
 
-LT3042: https://www.aliexpress.com/item/Dual-dc-output-LT3042-Ultra-Low-Noise-Linear-Regulator-Power-Supply-for-Amanero-XMOS-DAC/32866148460.html
-(Ultra low noise power supply)
+LT3042 (ultra low noise linear power supply): https://www.aliexpress.com/item/Dual-dc-output-LT3042-Ultra-Low-Noise-Linear-Regulator-Power-Supply-for-Amanero-XMOS-DAC/32866148460.html
 
 ![LT3042](pictures/LT3042-x2-module.jpg?raw=true)
 
@@ -84,12 +86,4 @@ ATT 6 dB: https://www.aliexpress.com/item/2W-SMA-DC-6GHz-Coaxial-Fixed-Attenuato
 ADT4-1WT: https://www.aliexpress.com/item/Free-Shipping-PIC16F1829-I-SS-PIC16F1829-SSOP20-new-and-Original-in-stock/32295905036.html
 
 ![ADT4-1WT](https://i.imgur.com/E99LSdG.jpg)
-
-
-
-
-
-
-
-
 
