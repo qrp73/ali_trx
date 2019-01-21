@@ -14,10 +14,10 @@ output i2c_scl;
 inout i2c_sda;
 
 
-reg [7:0] I2C_addr = 8'b00110100;	// 7 bits device address and 1 bit write operation
+reg [7:0] I2C_addr = 8'b00110100;   // 7 bits device address and 1 bit write operation
 reg i2c_scl;
 reg i2c_sda;
-reg NewData;		
+reg NewData;
 reg [15:0] I2C_data;
 reg [2:0] I2C_WordCnt;
 reg [1:0] I2C_BitPhase;
@@ -27,7 +27,7 @@ reg prev_line;
 reg [4:0] prev_line_in_gain;
 
 // Set up TLV320 data to send 
-always @*	
+always @*
 begin
     case (I2C_WordCnt)	// data to load into TLV320
         3'd0: I2C_data <= 16'h1E00;                             // Reset chip
@@ -50,7 +50,7 @@ reg [19:0] i2c_delay_counter;
 always@(posedge inclk_i2c)
 begin
     if (i2c_delay_counter != (200*800))        // 200 [ms]
-        i2c_delay_counter <= i2c_delay_counter + 1;
+        i2c_delay_counter <= i2c_delay_counter + 20'd1;
     else 
     begin
         if (I2C_BitPhase == 2) 
@@ -58,16 +58,16 @@ begin
                 I2C_BitPhase <= 0;
                 if (I2C_BitCnt == 31)
                     begin
-                        if (I2C_WordCnt == 7)	
+                        if (I2C_WordCnt == 7)
                             begin   // stop when all data sent, and wait for boost to change           
                                 if (boost != prev_boost || line != prev_line || line_in_gain != prev_line_in_gain) 
-                                    begin  									// has boost or line in or line-in gain changed?
-                                        prev_boost <= boost; 	   			// save the current boost setting 
-                                        prev_line <= line;		   			// save the current line in setting
-                                        prev_line_in_gain <= line_in_gain;	// save the current line-in gain setting
+                                    begin                                   // has boost or line in or line-in gain changed?
+                                        prev_boost <= boost;                // save the current boost setting 
+                                        prev_line <= line;                  // save the current line in setting
+                                        prev_line_in_gain <= line_in_gain;  // save the current line-in gain setting
                                         I2C_WordCnt <= 1'd0;
                                         I2C_BitCnt <= 1'd0;
-                                        NewData <= 1'd1;					
+                                        NewData <= 1'd1;
                                     end
                                 else
                                     NewData <= 1'd0;
