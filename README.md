@@ -72,6 +72,11 @@ WM8731: https://www.aliexpress.com/item/FREE-SHIPPING-Wm8731-module-audio-module
 
 ![WM8731](https://i.imgur.com/W0RaJWr.jpg)
 
+LT3042: https://www.aliexpress.com/item/Dual-dc-output-LT3042-Ultra-Low-Noise-Linear-Regulator-Power-Supply-for-Amanero-XMOS-DAC/32866148460.html
+(Ultra low noise power supply)
+
+![LT3042](pictures/LT3042-x2-module.jpg?raw=true)
+
 ATT 6 dB: https://www.aliexpress.com/item/2W-SMA-DC-6GHz-Coaxial-Fixed-Attenuators-Frequency-6GHz-SMA-Fixed-Connectors/32896198417.html
 
 ![ATT 6 dB](https://i.imgur.com/c58DhRB.jpg)
