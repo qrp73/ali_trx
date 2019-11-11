@@ -9,6 +9,11 @@ Building your own SDR DDC/DUC transceiver with DIY modules from aliexpress
 ## Circuit Diagram
 ![Circuit Diagram](pictures/module-diagram.png?raw=true)
 
+## Software
+
+HDSDR software with ExtIO_HPSDR# plugin can be used:
+* ExtIO_HPSDR# plugin link: https://www.rtl-sdr.com/forum/viewtopic.php?f=4&t=5073#p12727
+* HDSDR software link: http://www.hdsdr.de/
 
 ## Prepare AD6645 module
 
